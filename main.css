@@ -1,11 +1,6 @@
 #fullPage {
     height: 80%;
     font-family: "DM Sans", sans-serif;
-    color: white;
-    opacity: 0.9;
-    background-image:  radial-gradient(#f26419 0.5px, transparent 0.5px), radial-gradient(#f26419 0.5px, #2f4858 0.5px);
-    background-size: 20px 20px;
-    background-position: 0 0,10px 10px;
 }
 
 #fp-nav {
@@ -16,12 +11,15 @@
 #fp-nav ul li .fp-tooltip {
     font-weight: bold;
     color: #f26419;
-    background: white;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 #fp-nav ul li a span {
+    background: #2f4858;
+}
+
+#fp-nav ul li .active span {
     background: #f26419;
 }
 
@@ -40,10 +38,6 @@
 }
 .accordion-item {
     background-color: #2f4858;
-}
-
-.exp-img {
-    text-align: right;
 }
 
 .bio-content .main {
@@ -88,6 +82,12 @@
     margin: 18px;
     height: 140px;
     border-radius: 10px;
+    box-shadow: 15px 15px rgba(0,0,0,.15);
+    transition: box-shadow .4s ease;
+}
+
+#contact .col:hover {
+    box-shadow: 10px 10px rgba(0,0,0,.25);
 }
 
 #normal-con img {
