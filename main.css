@@ -1,32 +1,35 @@
-#fullPage {
-    height: 80%;
-    font-family: "DM Sans", sans-serif;
+html, body {
+    height:100%;
 }
 
-#fp-nav {
+#introduction {
+    height: 100vh;
+    position: relative;
+}
+
+#introduction .row {
+    margin: 0 auto;
+    width: 100%;
     position: absolute;
-    top: 60px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-#fp-nav ul li .fp-tooltip {
+span {
     font-weight: bold;
-    color: #f26419;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 2rem;
 }
-
-#fp-nav ul li a span {
-    background: #2f4858;
-}
-
-#fp-nav ul li .active span {
-    background: #f26419;
-}
-
 .introtext p{
     font-weight: bold;
     font-size: 3rem;
     line-height: 40px;
+}
+#bio {
+    scroll-margin-top: 60px;
+}
+#experience {
+    scroll-margin-top: 100px;
 }
 .accordion-button{
     background:  #f6ae2d;
@@ -40,14 +43,9 @@
     background-color: #2f4858;
 }
 
-.bio-content .main {
-    height: 550px;
-    overflow-y: scroll;
-}
-.section span {
+.accordion-body .desc {
+    color: #ffffff;
     font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -59,13 +57,6 @@
     border-radius: 5px;
     background-color: rgba(0,0,0,.2);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.2);
-}
-
-.accordion-body .desc {
-    height: 280px;
-    overflow-y: scroll;
-    color: #ffffff;
-    font-size: 20px;
 }
 
 #contact {
@@ -100,8 +91,10 @@
 #normal-con .text {
     font-size: 1rem;
 }
-
 #gallery{
+    scroll-margin-top: 60px;
+}
+#gallery-content{
     line-height:0;
    -webkit-column-count:5; /* split it into 5 columns */
    -webkit-column-gap:5px; /* give it a 5px gap between columns */
@@ -111,17 +104,19 @@
    column-gap: 5px;
 }
 
-#gallery img {
+#gallery-content img {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 5px; /* to match column gap */
     filter: grayscale(100%);
 }
 
-#gallery img:hover {
+#gallery-content img:hover {
     filter: none;
 }
-
+.bio-content {
+    font-size: 1.2rem;
+}
 .bio-pic {
     position: relative;
 }
@@ -142,10 +137,10 @@
 }
 
 @media (max-width: 1000px) {
-    #gallery {
-     -moz-column-count:    4;
-     -webkit-column-count: 4;
-     column-count:         4;
+    #gallery-content {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
     }
     #contact img {
         width: 15%;
@@ -168,25 +163,18 @@
         justify-content: center;
         align-items: center;
     }
-    .accordion-body .desc {
-        height: 180px;
-        font-size: 15px;
-    }
 
     .introtext p{
         font-weight: bold;
         font-size: 2rem;
     }
+    #gallery-content {
+        -moz-column-count:    2;
+        -webkit-column-count: 2;
+        column-count:         2;
+       }
 }
 @media only screen and (max-width: 400px){
-    .accordion {
-        margin-top: 6rem;
-    }
-
-    #bio .container {
-        margin-top: 5rem;
-    }
-
     #contact .container{
         height: 70%;
     }
@@ -196,9 +184,24 @@
     }
 }
 
-@media only screen and (max-height: 767px){
-    .bio-content .main {
-        height: 430px;
-        overflow-y: scroll;
-    }
+#nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f6ae2d;
+    position: fixed;
+    width: 100%;
+    z-index:99;
+    font-weight: bold;
 }
+  
+#nav li:hover{
+    background-color: #f26419;
+}
+#nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+

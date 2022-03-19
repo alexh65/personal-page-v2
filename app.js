@@ -1,12 +1,3 @@
-new fullpage('#fullPage', {
-    autoScrolling: true,
-    navigation: true,
-    showActiveTooltip: true,
-    navigationPosition: 'left',
-    normalScrollElements: '.bio-content, .desc',
-    navigationTooltips: ['Welcome', 'Bio', 'Work Experience', 'Gallery', 'Contact'],
-});
-
 // animation for welcome section
 const logo = document.querySelector("#introduction img");
 const s1 = document.querySelector(".introtext .s1");
@@ -26,6 +17,6 @@ for (let i=1; i < 12; i++) {
     } else {
         img_elem.src = "/slideshow/" + i + ".jpeg";
     }
-    document.getElementById("gallery").appendChild(img_elem);
+    document.getElementById("gallery-content").appendChild(img_elem);
 }
 
